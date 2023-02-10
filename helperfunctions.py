@@ -1,6 +1,5 @@
 import os
 from telegraph import Telegraph
-from pyzbar.pyzbar import decode
 from PIL import Image
 
 
@@ -29,14 +28,6 @@ def gppcommand(inputt):
     cmd = f'g++ -o {filename} {inputt}'
     return cmd, filename
 
-
-# scan qr and barcode
-def scanner(file):
-    data = decode(Image.open(file))
-    info = ""
-    for ele in data:
-        info = info + str(ele[0],encoding="utf-8") + "\n\n"
-    return info
 
 
 # compiling jar command
