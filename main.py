@@ -904,7 +904,7 @@ def downstatus(statusfile,message):
 # app messages
 @app.on_message(filters.command(['start']))
 def start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-    app.send_message(message.chat.id, f"Welcome {message.from_user.mention}\nSend a **File** first and then you can choose **Extension**\n\n__want to know more about me ?\nuse /help - to get List of Commands\nuse /detail - to get List of Supported Extensions\n\nI also have Special AI features including ChatBot, you don't believe me? ask me anything__", reply_to_message_id=message.id)
+    app.send_message(message.chat.id, f"السلام عليكم يا {message.from_user.mention}\n أرسل الملف الصوتي ثم اختر الصيغة التي تريد التحويل إليها أو اختر speech to text للتفريغ  \n\n لبقية البوتات هنا \n\n https://t.me/ibnAlQyyim/1120 ", reply_to_message_id=message.id)
                      
 
 # detail
