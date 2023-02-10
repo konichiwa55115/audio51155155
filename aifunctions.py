@@ -744,6 +744,10 @@ def latdifstatus(hash, prompt="latentdiffusion"):
 
 
 r = sr.Recognizer()
+with sr.AudioFile('path/to/audiofile.wav') as source:
+    audio = r.record(source)
+
+r.recognize_google(audio, language='ar-AR')
 
 def get_large_audio_transcription(path,message):
 
