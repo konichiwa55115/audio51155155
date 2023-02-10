@@ -22,9 +22,6 @@ from websocket import create_connection
 
 r = sr.Recognizer()
 
-
-r.recognize_google(audio, language='ar-AR')
-
 def get_large_audio_transcription(path,message):
 
     id = message.id
@@ -52,7 +49,7 @@ def get_large_audio_transcription(path,message):
             audio_listened = r.record(source)
 
             try:
-                text = r.recognize_google(audio_listened)
+                text = r.recognize_google(audio_listened, language='ar-AR')
             except sr.UnknownValueError as e:
                 #print("Error:", str(e))
                 whole_text += "\n(error)\n"
