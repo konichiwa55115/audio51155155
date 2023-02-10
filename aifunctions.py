@@ -21,8 +21,7 @@ from websocket import create_connection
 
 
 r = sr.Recognizer()
-with sr.AudioFile('path/to/audiofile.wav') as source:
-    audio = r.record(source)
+
 
 r.recognize_google(audio, language='ar-AR')
 
