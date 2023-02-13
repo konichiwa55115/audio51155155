@@ -7,6 +7,10 @@ halo==0.0.31
 Wand==0.6.8
 requests
 SpeechRecognition
+python-telegram-bot==12.3.0
+coloredlogs
+pillow
+watchdog
 pydub
 opencv-python
 gTTS
